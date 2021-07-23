@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, ">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>The Long Gone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+      <div id="wrapper">
+          <div id="body-wrapper">
+              <div class="head">
+                  <div class="head-wrapper">
+                      <div class="logo">
+					  <a href="\"><img src="img\band-logo-2-alpha.png" alt="The Long Gone band logo" /></a>
+					  <div id="nav" class="overlay">
+					  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					  <div class="overlay-content" id="overlay-content">
+					      <a href="\#sound">SOUNDS</a>
+						  <a href="\#shows">SHOWS</a>
+						  <a href="\#contact">CONTACT</a>					
+						  <a href="https://www.facebook.com/thelonggone" id="social" target="_blank"><i class="fab fa-facebook"></i></a>
+						  <a href="https://www.youtube.com/channel/UCmRdPMwmbFq2wFb9mlhafXg" id="social" target="_blank"><i class="fab fa-youtube"></i></a>
+					      <a href="https://www.reverbnation.com/thelonggone5" id="social" target="_blank"><i class="fas fa-star"></i></a>
+					  </div>
+					  </div>
+					    <span class="nav-btn" onclick="openNav()">&#9776;</span>
+                        <ul>
+                            <li><a href="\#sound">SOUNDS</a></li>
+                            <li><a href="\#shows">SHOWS</a></li>
+                            <li><a href="\#contact">CONTACT</a></li>
+                        </ul>
+					  </div>
+                      <div class="social">
+                        <a href="https://www.youtube.com/channel/UCmRdPMwmbFq2wFb9mlhafXg" target="_blank"><img src="img/iconmonstr-youtube-6-32.png" alt="youtube logo" /></a>
+                        <a href="https://www.facebook.com/thelonggone" target="_blank"><img src="img/iconmonstr-facebook-1-32.png" alt="facebook logo" /></a>
+                        <a href="https://www.reverbnation.com/thelonggone5" target="_blank"><img src="img/reverbnation-logo.png" alt="reverbnation logo" /></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="main">
+                  <div class="main-wrapper">
+                      <div id="sounds">
+                        <img src="img/paul-wong-s5X2tSLa7oE-unsplash.jpg" alt="The Long Gone promotional image" />
+                        <div id="sound" class="player">
+                          <!--Define the section for displaying details-->
+                          <div class="details">
+                            <div class="now-playing">PLAYING x Of y</div>
+                            <div class="track-art"></div>
+                            <div class="track-name">Track Name</div>
+                            <div class="track-artist">Track Artist</div>
+                          </div>
+                          <!--Define the section for displaying track buttons-->
+                          <div class="buttons">
+                            <div class="prev-track" onclick="prevTrack()">
+                              <i class="fa fa-step-backward fa-2x"></i>                              
+                            </div>
+                            <div class="playpause-track" onclick="playpauseTrack()">
+                              <i class="fa fa-play-circle fa-5x"></i>
+                            </div>
+                            <div class="next-track" onclick="nextTrack()">
+                              <i class="fa fa-step-forward fa-2x"></i>
+                            </div>
+                          </div>
+                            <!--Define the section for displaying the seek slider-->
+                            <div class="slider_container">
+                              <div class="current-time">00:00</div>
+                              <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                              <div class="total-duration">00:00</div>
+                            </div>
+                            <!--Define the section for displaying the volume slider-->
+                            <div class="slider_container">
+                              <i class="fa fa-volume-down"></i>
+                              <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                              <i class="fa fa-volume-up"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="column" id="shows">
+                            <table>
+                              <caption>UPCOMING SHOWS</caption>
+                              <thead>
+                                <tr>
+                                  <th scope="col">WHEN</th>
+                                  <th scope="col">WHERE</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>Sat, Apr 4 @ 6:30pm - 9:30pm</td>
+                                      <td>The River Shack<br/>6120 Marina Dr S<br/>Mobile, AL 36605</td>
+                                  </tr> 
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="column" id="contact">
+                            <h1>CONTACT</h1>
+                            <div class="row">
+                              <div class="column" id="info">
+                                <h3>Booking:</h3>
+                                <p>Mike Reynolds</p>
+                                <a href="tel:251-316-1420">(251) 316-1420</a>
+                                <br/>
+                                <a href="mailto:montypadre77@gmail.com">montypadre77@gmail.com</a>
+
+                                <p>Matt Reynolds</p>
+                                <a href="tel:251-401-8076">(251) 401-8076</a>
+                                <br/>
+                                <a href="mailto:mattreynolds395@gmail.com">mattreynolds395@gmail.com</a>
+                              </div>
+                              <div class="column" id="message">
+                                <form method="post" name="contact-form" id="contact-form">
+                                  <div id="field">
+                                    <label for='name'>Name:</label> 
+                                    <input type="text" name="name" id="name" size="18" required>
+                                  </div>
+                                  <div id="field">
+                                    <label for='email'>Email:</label>
+                                    <input type="email" name="email" id="email" size="18" required>
+                                  </div>
+                                  <div id="field">
+                                    <label for='message'>Message:</label> 
+                                    <textarea id="msg" name="message" rows="5" style="vertical-align: top;"></textarea>
+                                  </div>
+                                  <div>
+                                    <input class="form-submit-btn" id="button" type="submit" name="submit" value="SUBMIT" />
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  </div>
+                 
+              </div>
+          </div>
+      <script src="js/main.js"></script>
+      <script>
+        $("#contact-form").submit(function() {
+          event.preventDefault(); // Prevent default page reloading
+          var data = $(this).serialize(); // Get the form data
+
+          $.ajax({
+            type: "POST",
+            url: "form-to-email.php",
+            data: data,
+            success: function(data) {
+              $('#contact-form')[0].reset(); // Reset form data
+              $('#message').html(data);
+              console.log("Success");
+            }
+          });
+          return false;
+          });
+      </script>
+	  <script>
+	      function openNav() {
+		      
+		      document.getElementById("nav").style.height = "100%";
+		  }
+		  
+		  function closeNav() {
+		      document.getElementById("nav").style.height = "0%";
+		  }
+	  </script>
+  </body>
+</html>

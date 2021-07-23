@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+div.head {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    position: fixed;
+    z-index: 99;
+}
+
+.logo img {
+    float: left;
+}
+
+.logo ul {
+    float: left;
+}
+
+/* Main Menu */
+ul {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    display: block;
+    position: relative;
+    float: left;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 11px 15px 5px 15px;
+    margin-left: 100px;
+    white-space: nowrap;
+}
+
+ul li a:hover {
+    color: #999999;
+}
+
+.social {
+    display: inline-block;
+    padding-right: 2%;
+    float: right;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main img {
+    padding-top: 10px;
+    width: 100%;
+    flex-grow: 1;
+    /*height: 600px;*/
+}
+
+#sounds {
+    font-family: 'Averia Serif Libre', cursive;
+    background-color: lightgreen;
+    /* Smoothly transition the background color */
+    transition: background-color .5s;
+}
+#sounds h1 {
+    font-family: 'Averia Serif Libre', cursive;
+    text-align: center;
+    font-size: 2.5em;
+}
+/*Using flex with the column direction to align items in a vertical direction */
+.player {
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+}
+.track-art {
+    margin: 25px;
+    height: 200px;
+    width: 200px;
+    background-image: URL("https://source.unsplash.com/1uVCTVSn-2o");
+    background-size: cover;
+    background-position: center;
+    /*border-radius: 15%;*/
+}
+/* Changing the font sizes to suitable ones */
+.now-playing {
+    font-size: 1rem;
+}
+.track-name {
+    font-size: 3rem;
+}
+.track-artist {
+    font-size: 1.5rem;
+}
+/* Using flex with the row direction to align items in a horizontal direction */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.playpause-track, 
+.prev-track,
+.next-track {
+    padding: 25px;
+    opacity: 0.8;
+/* Smoothly transition the opacity */
+transition: opacity .2s;
+}
+/* Define the slider path width so that it scales properly */
+.slider_container {
+    width: 75%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Modify the appearance of the slider */
+.seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: black;
+    opacity: 9.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+/* Modify the appreance of the slider thumb */
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+/* Change the opacity when mouse is hovered */
+.seek_slider:hover,
+.volume_slider:hover {
+    opacity: 1.0;
+}
+.seek_slider {
+    width: 60%;
+}
+.volume_slider {
+    width: 30%;
+}
+.current-time,
+.total-duration {
+    padding: 10px;
+}
+i.fa-volume-down,
+i.fa-volume-up {
+    padding: 10px;
+}
+/* Change the mouse cursor to a pointer when hovered over */
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward {
+    cursor: pointer;
+}
+
+.row {
+	background-color: black;
+    text-align: center;
+    display: flex;
+	padding-bottom: 15px;
+}
+.column {
+   flex: 50%;
+}
+
+#shows {
+    background-color: black;
+    font-family: 'Averia Serif Libre', cursive;
+    color: white; 
+    padding-top: 20px;
+}
+
+table {
+    /* table-layout: fixed; */
+    width: 50%;
+    font-size: 1em;
+    border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+}
+table caption {
+    font-size: 3.5em;
+}
+th, td {
+    padding: 20px;
+    text-align: center;
+}
+td {
+	width: 10px;
+}
+
+#contact {
+    background-color: black;
+    font-family: 'Averia Serif Libre', cursive;
+    color: white;
+    float: left;
+}
+#contact h1 {
+    text-align: center;
+}
+#contact p {
+    margin-bottom: 0px;
+}
+#contact a {
+    text-decoration: none;
+    color: white;
+}
+#contact a:hover {
+    color: #999999;
+}
+#message {
+    padding-top: 20px;
+}
+#field {
+    padding: 7px;
+}
+input[type=text], input[type=email] {
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+#contact textarea {
+    margin-left: 10px;
+}
+input[type=submit] {
+    font-family: 'Averia Serif Libre', cursive;
+    background-color: #45a049; 
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #04AA6D;
+  }
+
+/* Responsive Design */
+@media screen and (min-width: 280px) and (max-width: 768px) {
+	ul li {
+		display: none;
+	}
+	.social {
+		display: none;
+	}
+	.nav-btn {
+		font-size: 1.5em;
+		padding-right: 7%;
+		float: right;
+	}
+	.main img {
+		height: 40em;
+	}
+	.player {
+        height: 95vh;
+    }
+	.row {
+		display: inline-block;
+		width: 100%;
+	}
+	#contact {
+		float: none;
+	}
+	/* Menu */
+	/* The Overlay (background) */
+	.overlay {
+		height: 0%;
+		width: 100%;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		background-color: rgb(0,0,0);
+		background-color: rgba(0,0,0,0.9);
+		overflow-x: hidden;
+		transition: 0.5s;
+	}
+	.overlay-content {
+		position: relative;
+		top: 25%;
+		width: 100%;
+		text-align: center;
+		margin-top: 30px;
+	}
+	.overlay a {
+		padding: 8px;
+		text-decoration: none;
+		font-size: 36px;
+		color: #818181;
+		display: block;
+		transition: 0.3s;
+	}
+	.overlay a:hover, .overlay a:focus {
+		color: #f1f1f1;
+	}
+	.overlay .closebtn {
+		position: absolute;
+		top: 20px;
+		right: 45px;
+		font-size: 60px;
+	}
+	.overlay a { font-size: 20px }
+	.overlay .closebtn {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+	.closebtn, .head-wrapper span, .overlay-content {
+		display: none;
+	}
+}
+@media screen and (min-width: 1401px) and (max-width: 2560px) {
+	.closebtn, .head-wrapper span, .overlay-content {
+		display: none;
+	}
+    .player {
+        height: 85vh;
+    }
+}
+
+
+
+
+
+
+
+  
